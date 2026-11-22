@@ -1,13 +1,14 @@
 services:
   - type: web
     name: cognilearn-bloom-ai
-    runtime: static
+    runtime: node
+    plan: free
+    region: oregon
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    startCommand: npm start
+    healthCheckPath: /health
     envVars:
       - key: NODE_VERSION
         value: 20.18.0
+      - key: PORT
+        value: 10000
