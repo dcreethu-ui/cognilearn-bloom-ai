@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF5EC;
+    color: #281A12;
+  }
+}
+
+/* Warm terracotta scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5ECE0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCCEC4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C7571B;
+}
+
+/* Botanical subtle pattern for cards and banners */
+.bg-botanical {
+  background-color: #FDFBF7;
+  background-image: radial-gradient(#E89056 0.75px, transparent 0.75px), radial-gradient(#DFCBB3 0.75px, #FDFBF7 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
